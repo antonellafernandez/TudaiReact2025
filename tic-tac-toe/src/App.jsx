@@ -99,9 +99,9 @@ function App() {
   }
 
   return (
-    <main className="flex items-center justify-center">
-      <div id="game-container" className="flex flex-col items-center justify-center bg-red-400 w-1/3 p-10 rounded shadow-2xl">
-        <ol id="players" className="flex flex-row justify-between w-full">
+    <main className="flex flex-col items-center justify-center m-10 gap-10">
+      <div id="game-container" className="relative flex flex-col items-center justify-center bg-gray-800 w-1/3 p-10 rounded shadow-2xl">
+        <ol id="players" className="flex flex-row items-center justify-between w-full gap-5 text-cyan-500">
           <Player
             initialName={PLAYERS.X}
             symbol="X"

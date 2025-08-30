@@ -32,12 +32,12 @@ export default function Player({
   }
 
   return (
-    <li className={isActive ? 'active' : undefined}>
-      <span>
+    <li className={`flex items-center justify-between w-1/2 p-2 border-2 border-cyan-500 ${isActive ? 'active' : undefined}`}>
+      <span className="flex justify-between w-3/4 font-extrabold">
         {editablePlayerName}
-        <span className="player-symbol">{symbol}</span>
+        <span>{symbol}</span>
       </span>
-      <button onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</button>
-    </li>
+      <button onClick={handleEditClick} className="hover:text-amber-600">{isEditing ? 'Save' : 'Edit'}</button>
+    </li >
   );
 }
