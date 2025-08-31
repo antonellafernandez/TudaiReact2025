@@ -99,9 +99,9 @@ function App() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center m-10 gap-10">
-      <div id="game-container" className="relative flex flex-col items-center justify-center bg-gray-800 w-1/3 p-10 rounded shadow-2xl">
-        <ol id="players" className="flex flex-row items-center justify-between w-full gap-5 text-cyan-500">
+    <main>
+      <div id="game-container">
+        <ol id="players" className="highlight-player">
           <Player
             initialName={PLAYERS.X}
             symbol="X"
@@ -115,11 +115,9 @@ function App() {
             onChangeName={handlePlayerNameChange}
           />
         </ol>
-
         {(winner || hasDraw) && (
           <GameOver winner={winner} onRestart={handleRestart} />
         )}
-
         <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
